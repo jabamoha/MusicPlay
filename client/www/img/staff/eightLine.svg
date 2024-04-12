@@ -1,0 +1,9 @@
+<svg width="70" height="15" xmlns="http://www.w3.org/2000/svg">
+
+ <!-- If you do not specify the stroke
+         color the line will not be visible -->
+ <g>
+  <title>Layer 1</title>
+  <path stroke="black" stroke-width="5px" id="svg_1" d="m0.09624,9.81232l72.65637,-5.73725" opacity="undefined"/>
+ </g>
+</svg>

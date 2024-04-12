@@ -1,0 +1,47 @@
+{
+    "name": "CommonCordova",
+    "displayName": "CommonCordova",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "cordova-android": "^10.1.2",
+        "cordova-browser": "^6.0.0",
+        "cordova-plugin-camera": "^6.0.0",
+        "cordova-plugin-crop": "^0.4.0",
+        "cordova-plugin-file": "^7.0.0",
+        "cordova-plugin-http": "^1.2.0",
+        "cordova-plugin-media": "^6.1.0",
+        "cordova-plugin-media-capture": "^4.0.0",
+        "cordova-plugin-screen-orientation": "^3.0.2",
+        "cordova-plugin-streaming-media": "^2.3.0",
+        "es6-promise-plugin": "^4.2.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-advanced-http": {},
+            "cordova-plugin-file": {},
+            "cordova-plugin-http": {},
+            "cordova-plugin-media": {},
+            "cordova-plugin-camera": {},
+            "cordova-plugin-media-capture": {},
+            "cordova-plugin-streaming-media": {},
+            "cordova-plugin-screen-orientation": {},
+            "cordova-plugin-crop": {}
+        },
+        "platforms": [
+            "browser",
+            "android"
+        ]
+    },
+    "dependencies": {
+        "cordova-plugin-advanced-http": "^3.3.1",
+        "tone": "^14.7.77"
+    }
+}

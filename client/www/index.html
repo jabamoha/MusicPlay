@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pitch Detector</title>
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; media-src *; img-src 'self' data:"> -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Alike" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"> </script>
+  <!-- <script type="text/javascript" src="platforms/android/platform_www/cordova.js"></script> -->
+
+</head>
+
+<body id="root">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <script src="./js/server.js" type="module" defer> </script>
+  <script src="./js/pitchdetect.js" defer></script>
+  <script src="./js/camera.js" defer></script>
+  <div id="canvasContainer">
+    <canvas id="cropCanvas"></canvas>
+    <canvas id="backupCanvas" hidden></canvas>
+    <img id='img'>
+    <img id='image'>
+  </div>
+  <div id="buttons">
+    <input id="inputImg" class="button-black" type='file' accept='image/*' onchange='openFile(event)'>
+    <button class="button-white" onclick="this.innerText = togglePlayback()">use demo audio</button>
+    <button class="button-black" onclick="toggleOscillator()">use oscillator</button>
+  </div>
+  <video id="videoElement" width="320" height="240" controls></video>
+  <button onclick="takePicture()">Take Picture</button>
+  <div id="content2" class="gridItem">
+
+    <div class="center">
+      <div id="detector" class="vague">
+        <!--HZ-->
+        <div class="pitch">
+          <span id="pitch">--</span>
+          Hz
+        </div>
+        <div class="note"><span id="note">--</span></div>
+        <canvas id="output" width="300" height="42"></canvas>
+        <div id="detune">
+          <span id="detune_amt">--</span>
+          <span id="flat">cents &#9837;</span>
+          <span id="sharp">cents &#9839;</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="center">
+      <canvas id="waveform" width="512" height="256"></canvas>
+    </div>
+    <div class="center">
+
+    </div>
+  </div>
+  <div class="center">
+    <div class="notes-container">
+      <div class="lines-container">
+        <img class="GClefsvg" src="./img/staff/G-clef.svg" alt="GClef" />
+        <img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+        <img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+        <img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+        <img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+        <img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+        <div id="containerQuarter0">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

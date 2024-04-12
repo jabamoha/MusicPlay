@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:"> -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src * gap: ws: https://ssl. gstatic.com;style-src * 'unsafe-inline' 'self' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;img-src * data: 'unsafe-inline' 'self';">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body id="content2">
+	<script type='text/javascript' src='./js/tone/build/Tone.js' defer></script>
+	<script src="./js/midi.js" defer></script>
+	<script src="./js/server.js" defer> </script>
+
+	<!-- <img id='outputimg' style="height:149px; width:833px;"> -->
+	<div class="center">
+		<div class="notes-container notes-container-midi">
+			<div class="lines-container">
+				<img class="GClefsvg" src="./img/staff/G-clef.svg" alt="GClef" />
+				<img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+				<img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+				<img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+				<img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+				<img class="line" src="./img/staff/VerticalLine.svg" alt="Vertical Line" />
+				<div id="containerQuarterNoteGC">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pitchDetect">
+		<script src="./js/pitchdetect.js" defer></script>
+		<div class="gridItem" id="gridItem">
+			<div class="center">
+				<div id="detector" class="vague">
+					<!--HZ-->
+					<div class="pitch">
+						<span id="pitch">--</span>
+						Hz
+					</div>
+					<div class="note"><span id="note">--</span></div>
+					<canvas id="output" width="300" height="42"></canvas>
+					<div id="detune" hidden>
+						<span id="detune_amt">--</span>
+						<span id="flat">cents &#9837;</span>
+						<span id="sharp">cents &#9839;</span>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div id="correctNote" class="vague">
+					<!--HZ-->
+					<div class="correctPitch">
+						<span id="correctPitch">--</span>
+						Hz
+					</div>
+					<div class="correctNote"><span id="correctNote2">--</span></div>
+					<canvas id="correctOutput" width="300" height="42"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="center" hidden>
+			<canvas id="waveform" width="1" height="1" hidden></canvas>
+		</div>
+		<div class="">
+			<div id="buttons">
+				<button class="button-white" onclick="playMidi()">Play Midi Notes</button>
+				<button class="button-black" id="live" onclick="startPitchDetect();">Start Live Recording</button>
+				<button class="button-white" onclick="this.innerText = togglePlayback()">use demo audio</button>
+				<button class="button-black" onclick="toggleLiveInput()">use live input</button>
+				<button class="button-white" onclick="toggleOscillator()">use oscillator</button>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+</html>

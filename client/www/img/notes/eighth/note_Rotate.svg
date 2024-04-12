@@ -1,0 +1,43 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" version="1.0">
+
+ <metadata>image/svg+xmlOpenclipartEighth note2007-04-10T14:26:55Une croche.http://openclipart.org/detail/3864/eighth-note-by-corbeaucorbeauclip artclipartcrocheeighth noteimagemediamusicmusic notationmusiquenotation musicalenotepublic domainsvg</metadata>
+ <!-- Code injected by live-server -->//
+ <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(-180 24.5434 26.6129)" stroke="null" fill-rule="evenodd" d="m31.99436,3c-5.28267,8.40938 -7.16006,5.17222 -10.31534,10.91544c-3.15528,5.74322 4.61519,24.27735 2.1432,11.07422c-2.47199,-13.20313 5.01873,-15.00142 4.59986,-6.17914l0.27961,21.7059c-13.31462,-4.49245 -13.62555,8.02286 -8.64371,9.41359c4.98184,1.39073 11.86851,-2.18436 11.0717,-9.44045l0.86466,-37.48957z" id="path3743"/>
+ </g></svg>

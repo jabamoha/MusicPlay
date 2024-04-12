@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-advanced-http","cordova-plugin-file","cordova-plugin-http","cordova-plugin-media","cordova-plugin-camera","cordova-plugin-media-capture","cordova-plugin-streaming-media","cordova-plugin-screen-orientation","es6-promise-plugin","cordova-plugin-crop"]}
